@@ -27,8 +27,8 @@ export VISUAL="nvim"
 
 # my custom scripts
 export PATH="${PATH}:/home/saul/.scripts"
-export PATH="${PATH}:/home/saul/.bioscripts/saul_python_bio"
-export PATH="${PATH}:/home/saul/.bioscripts/shell_bioscripts"
+export PATH="${PATH}:/home/saul/.bioscripts/python"
+export PATH="${PATH}:/home/saul/.bioscripts/bash"
 export PYTHONPATH="${PYTHONPATH}:/home/saul/.bioscripts"
 
 # t_coffee

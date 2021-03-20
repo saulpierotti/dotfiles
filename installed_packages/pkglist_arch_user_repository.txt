@@ -16,6 +16,7 @@ google-chrome
 gstreamer0.10-base
 hhsuite
 jalview
+mafft
 masterpdfeditor
 mprime
 nautilus-admin
