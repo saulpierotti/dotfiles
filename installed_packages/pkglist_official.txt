@@ -294,6 +294,7 @@ texlive-publishers
 texlive-science
 tipp10
 tk
+tmux
 tor
 totem
 traceroute

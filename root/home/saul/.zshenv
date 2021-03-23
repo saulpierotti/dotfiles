@@ -25,6 +25,9 @@ export TERM="xterm-kitty"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# for --user pip packages
+export PATH="${PATH}:/home/saul/.local/bin"
+
 # my custom scripts
 export PATH="${PATH}:/home/saul/.scripts"
 export PATH="${PATH}:/home/saul/.bioscripts/python"
