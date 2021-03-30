@@ -205,7 +205,6 @@ pacman
 pacman-contrib
 pamixer
 pandoc
-pandoc-citeproc
 papirus-icon-theme
 parted
 patch

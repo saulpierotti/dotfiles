@@ -27,12 +27,12 @@ export VISUAL="nvim"
 
 # for --user pip packages
 export PATH="${PATH}:/home/saul/.local/bin"
+export PYTHONPATH="${PYTHONPATH}:/home/saul/.local/lib"
 
 # my custom scripts
 export PATH="${PATH}:/home/saul/.scripts"
 export PATH="${PATH}:/home/saul/.bioscripts/python"
 export PATH="${PATH}:/home/saul/.bioscripts/bash"
-export PYTHONPATH="${PYTHONPATH}:/home/saul/.bioscripts"
 
 # t_coffee
 export EMAIL_4_TCOFFEE="saulpierotti@gmail.com"
