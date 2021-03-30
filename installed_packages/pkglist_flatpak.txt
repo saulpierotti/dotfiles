@@ -3,7 +3,7 @@ Youp for whatsapp	com.gigitux.youp	2.0	stable	system
 Microsoft Teams	com.microsoft.Teams	1.4.00.4855	stable	system
 Skype	com.skype.Client	8.69.0.77	stable	system
 Slack	com.slack.Slack	4.14.0	stable	system
-Spotify	com.spotify.Client	1.1.46.916.g416cacf1	stable	system
+Spotify	com.spotify.Client	1.1.55.498.gf9a83c60	stable	system
 Freedesktop Platform	org.freedesktop.Platform	19.08.14	19.08	system
 Freedesktop Platform	org.freedesktop.Platform	20.08.6	20.08	system
 default	org.freedesktop.Platform.GL.default		19.08	system
@@ -18,4 +18,3 @@ Materia-dark GTK theme	org.gtk.Gtk3theme.Materia-dark		3.22	system
 JabRef	org.jabref.jabref	5.2	stable	system
 Adwaita theme	org.kde.KStyle.Adwaita		5.15	system
 QGnomePlatform	org.kde.PlatformTheme.QGnomePlatform		5.15	system
-Zoom	us.zoom.Zoom	5.5.7938.0228	stable	system
