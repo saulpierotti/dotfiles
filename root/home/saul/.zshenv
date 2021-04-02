@@ -42,3 +42,4 @@ export KEY_MODELLER="MODELIRANJE"
 
 # ranger
 export RANGER_START="/home/saul/Desktop"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
