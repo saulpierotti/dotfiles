@@ -216,7 +216,6 @@ pdftk
 perl
 perl-file-homedir
 perl-file-mimeinfo
-perl-perl4-corelibs
 perl-yaml-tiny
 picom
 pkgconf

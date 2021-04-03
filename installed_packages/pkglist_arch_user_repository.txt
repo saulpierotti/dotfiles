@@ -15,6 +15,7 @@ gnome-encfs-manager-bin
 google-chrome
 gstreamer0.10-base
 hhsuite
+hmmer
 jalview
 mafft
 masterpdfeditor
