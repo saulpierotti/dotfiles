@@ -262,3 +262,19 @@ update-source-proplist alsa_input.hw_Loopback_1_0  device.description="Droidcam"
 - I use conky, configured in `./config/conky/conky.conf`
 - When changing screen resolution or disposition the placement of the widget can be messed up
   - I have a killall command in the i3 config followed by a call to conky, executed at each reload of i3
+
+## Coding
+
+- I use jupyter lab for prototyping and vim for my production environment
+- I use heavily pip for creating virtual environments
+
+### Jupyter
+
+- I use the jupyter installation that exists in --user
+- In order to add a kernel from a virtualenv, first activate the virtualenv and then run
+
+```
+ipython kernel install --name "name to show" --user
+```
+
+- Now the kernel is visible from the jupyter launched without any virtualenv
