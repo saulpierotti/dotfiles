@@ -33,14 +33,12 @@ alias hotspot='nmcli connection up Hotspot'
 alias reducepdf="reducepdf.sh"
 alias usb="mountdev.sh"
 alias awake="xscreensaver_awake.sh"
-alias bluec="bluetooth_connect.sh"
-alias blued="bluetooth_disconnect.sh"
 alias gitup="git_update.sh"
-alias routine="routine_tasks.sh 2>&1 | tee ~/routine_tasks.log"
 
 # frequent tasks
 alias clipboard="xclip -selection clipboard -i"
 alias ca="conda activate"
+alias jl="jupyter lab"
 
 # config shortcuts
 alias conf_nvim="$VISUAL /home/saul/.config/nvim/init.vim"
