@@ -43,3 +43,7 @@ export KEY_MODELLER="MODELIRANJE"
 # ranger
 export RANGER_START="/home/saul/Desktop"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# I use this before a cuda command as such
+# LD_LIBRARY_PATH=$CUDA; <cuda command>
+export CUDA="/opt/cuda/lib64"
