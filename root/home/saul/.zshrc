@@ -47,3 +47,19 @@ bindkey -s '^f' 'nautilus .&; disown\n'
 
 # disable git plugins in the sshfs mount folder for performance reasons
 zstyle ':vcs_info:*' disable-patterns "$HOME/sshfs_mountpoint(|/*)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/saul/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/saul/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/saul/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/saul/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
