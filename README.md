@@ -270,6 +270,8 @@ update-source-proplist alsa_input.hw_Loopback_1_0  device.description="Droidcam"
 
 ### Jupyter
 
+#### Virtual environments
+
 - I use the jupyter installation that exists in --user
 - In order to add a kernel from a virtualenv, first activate the virtualenv and then run
 
@@ -278,3 +280,30 @@ ipython kernel install --name "name to show" --user
 ```
 
 - Now the kernel is visible from the jupyter launched without any virtualenv
+
+#### Remote runtime
+
+- Sometimes it is useful to interact on my browser with a jupyter notebook that is on a server
+- I forward the remote port 9999 to the local one with the command
+  - There is nothing special about 9999, it is just an unused port
+  - `9999:localhost:8888` forwards the remote 8888 to the local 9999
+  - I am using the remote 9999 and not the jupyter default 8888 since in this way I can just copy-paste the address given by jupyter to my browser, without overwriting the local jupyter port 8888
+
+```
+ssh -L 9999:localhost:9999 -N <user@host>
+
+```
+
+- I start the notebook on the remote server under ssh using
+
+```
+ssh <user@host>
+jupyter lab --no-browser --port=9999
+```
+
+- I then open on my local browser the link given by the remote jupyter lab output
+- To automate the process I wrote a script that opens the tunnel and launches the remote command
+
+```
+tunnel_jupyterlab.sh <user@host> <<port>>
+```
