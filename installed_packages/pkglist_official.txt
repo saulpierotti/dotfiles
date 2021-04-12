@@ -92,7 +92,6 @@ gnome-contacts
 gnome-control-center
 gnome-documents
 gnome-font-viewer
-gnome-getting-started-docs
 gnome-icon-theme
 gnome-icon-theme-extras
 gnome-logs
