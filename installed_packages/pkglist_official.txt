@@ -34,7 +34,6 @@ conky
 coreutils
 cronie
 cryptsetup
-cuda
 cups
 cyrus-sasl
 dconf-editor
