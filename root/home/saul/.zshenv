@@ -44,9 +44,8 @@ export KEY_MODELLER="MODELIRANJE"
 export RANGER_START="/home/saul/Desktop"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# I use this before a cuda command as such
-# LD_LIBRARY_PATH=$CUDA; <cuda command>
-export CUDA="/opt/cuda/lib64"
+# for tensorflow 2.14
+export LD_LIBRARY_PATH="/opt/cuda/extras/CUPTI/lib64"
 
 # this is for theano
 export CUDA_ROOT="/opt/cuda/"
