@@ -245,7 +245,6 @@ python-rope
 python-scikit-learn
 python-scipy
 python-seaborn
-python-tensorflow
 python2
 python2-pip
 qt5ct
