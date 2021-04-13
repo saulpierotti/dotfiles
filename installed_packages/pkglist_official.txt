@@ -276,6 +276,7 @@ systemd
 systemd-sysvcompat
 tar
 telegram-desktop
+tensorflow
 testdisk
 texinfo
 texlab

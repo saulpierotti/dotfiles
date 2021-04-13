@@ -45,7 +45,4 @@ export RANGER_START="/home/saul/Desktop"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # for tensorflow 2.14
-export LD_LIBRARY_PATH="/opt/cuda/extras/CUPTI/lib64"
-
-# this is for theano
-export CUDA_ROOT="/opt/cuda/"
+export LD_LIBRARY_PATH="/opt/cuda/lib64"
