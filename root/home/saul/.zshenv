@@ -43,6 +43,3 @@ export KEY_MODELLER="MODELIRANJE"
 # ranger
 export RANGER_START="/home/saul/Desktop"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# for tensorflow 2.14
-export LD_LIBRARY_PATH="/opt/cuda/lib64"
