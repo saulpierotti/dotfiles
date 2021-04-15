@@ -25,7 +25,6 @@ nautilus-admin
 neovim-remote
 nordvpn-bin
 nvidia-container-toolkit
-nvidia-docker
 optimus-manager
 optimus-manager-qt
 oreo-cursors-git
