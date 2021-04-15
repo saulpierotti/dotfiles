@@ -24,6 +24,7 @@ mprime
 nautilus-admin
 neovim-remote
 nordvpn-bin
+nvidia-container-runtime-bin
 nvidia-container-toolkit
 optimus-manager
 optimus-manager-qt
