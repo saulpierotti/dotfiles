@@ -24,7 +24,6 @@ bless
 blueman
 bluez
 bluez-utils
-bmake
 breeze-gtk
 bzip2
 calibre
@@ -169,7 +168,6 @@ linux-zen-docs
 linux-zen-headers
 logrotate
 lostfiles
-lsb-release
 lshw
 lsof
 luit
@@ -255,7 +253,6 @@ redshift
 reflector
 reiserfsprogs
 rofi
-rpcsvc-proto
 rsync
 rygel
 s-nail
