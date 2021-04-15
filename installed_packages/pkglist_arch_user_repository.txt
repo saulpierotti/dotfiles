@@ -39,6 +39,7 @@ python37
 python38
 rstudio-desktop-bin
 seqkit-bin
+singularity-container
 snapd
 teamviewer
 timeshift
