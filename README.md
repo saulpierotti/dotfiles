@@ -25,11 +25,17 @@ The folder installed_packages is an update list of ll the packages present on my
 - I am using Grub2 with the `arch-silence-grub-theme-git` theme
 - I use `grub-btrfs` to see also btrfs snapshots in the boot menu
 
+### GRUB
+
+- Kernel parameters are specified in `/etc/default/grub` at the line GRUB_CMDLINE_LINUX_DEFAULT (GRUB_CMDLINE_LINUX for parameters that are active also in recovery mode)
+- After changing the file `/etc/default/grub` always run `grub-mkconfig -o /boot/grub/grub.cfg`
+
 ## Kernel
 
 - I use linux-zen and I also installed its headers
 - I removed the vanilla kernel to avoid 2 lengthy compilations at every package update
 - I keep also the LTS kernel and its headers as a backup
+- Kernel parameters are specified in `/etc/default/grub` (see GRUB section)
 
 ## GPU
 
@@ -40,6 +46,32 @@ The folder installed_packages is an update list of ll the packages present on my
     - Call it manually when needed (`prime-offload`) or reload i3 (I put prime_offload_hack.sh as an `exec_always`)
     - It is needed when I see a really long string in conky
 - For Nvidia I use the `nvidia-dkms` driver (since I am using the linux-zen kernel)
+- CUDA works but my vRAM is limited (2Gb) so heavy things cannot be run with it
+
+## Containers
+
+- I have both Docker and Singularity
+
+### Docker
+
+- In order to use GPU runtime I specified the kernel `parameter systemd.unified_cgroup_hierarchy=false` in `/etc/default/grub` at the line GRUB_CMDLINE_LINUX_DEFAULT
+- I can run a GPU container just using the flag `--gpus all`, do not use nvidia-docker since it is deprecated
+- GPU containers do not depend on host CUDA (!)
+
+### Singularity
+
+- Singularity is easier to use than Docker for data science since it has complete access to the host filesystem by default, it is similar to a virtualenv
+- Singularity can run a proprietary container file and also docker containers
+- GPU containers can be run but rely on the host CUDA toolkit
+
+## Scientific software
+
+- I use a combination of native packages, containers, virtual environments, anaconda
+
+### Tensorflow
+
+- It is really problematic to run it natively on GPU
+- The easiest way is to use the GPU container with Docker or Singularity
 
 ## Dual monitor and resolution
 
