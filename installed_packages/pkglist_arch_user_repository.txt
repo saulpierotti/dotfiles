@@ -18,14 +18,13 @@ gstreamer0.10-base
 hhsuite
 hmmer
 jalview
-libnvidia-container
-libnvidia-container-tools
 mafft
 masterpdfeditor
 mprime
 nautilus-admin
 neovim-remote
 nordvpn-bin
+nvidia-container-toolkit
 optimus-manager
 optimus-manager-qt
 oreo-cursors-git
