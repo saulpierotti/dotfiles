@@ -10,6 +10,7 @@ aria2
 atop
 audacity
 autoconf
+autoconf-archive
 automake
 avidemux-qt
 baobab
@@ -27,6 +28,7 @@ bluez-utils
 breeze-gtk
 bzip2
 calibre
+cgal
 cheese
 cmake
 cmatrix
@@ -245,6 +247,7 @@ python-rope
 python-scikit-learn
 python-scipy
 python-seaborn
+python-zstandard
 python2
 python2-pip
 qt5ct
@@ -266,6 +269,7 @@ signal-desktop
 simple-scan
 sl
 slock
+sparsehash
 speedtest-cli
 sshfs
 sudo

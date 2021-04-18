@@ -63,6 +63,8 @@ The folder installed_packages is an update list of ll the packages present on my
 - Singularity is easier to use than Docker for data science since it has complete access to the host filesystem by default, it is similar to a virtualenv
 - Singularity can run a proprietary container file and also docker containers
 - GPU containers can be run but rely on the host CUDA toolkit
+- The variable SINGULARITY_TMPDIR must be set ot a writeable directory when building containers
+  - I export the variable in ``.zshenv`
 
 ## Scientific software
 
