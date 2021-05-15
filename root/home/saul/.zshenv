@@ -29,6 +29,10 @@ export VISUAL="nvim"
 export PATH="${PATH}:/home/saul/.local/bin"
 export PYTHONPATH="${PYTHONPATH}:/home/saul/.local/lib"
 
+# temporary, for my msc thesis
+export PYTHONPATH="${PYTHONPATH}:/home/saul/master_thesis_work/source/models"
+export DMS_REPOSITORY_ROOT="/home/saul/master_thesis_work"
+
 # my custom scripts
 export PATH="${PATH}:/home/saul/.scripts"
 export PATH="${PATH}:/home/saul/.bioscripts/python"

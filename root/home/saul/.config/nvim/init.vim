@@ -104,6 +104,11 @@ let g:ale_fixers = {
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
+    \   'r': [
+    \       'styler',
+    \       'remove_trailing_lines',
+    \       'trim_whitespace',
+    \   ],
     \   'markdown': [
     \       'prettier',
     \       'remove_trailing_lines',
@@ -171,8 +176,9 @@ cnoremap kj <ESC>
 " Remove all warnings by ALE (and Coc since they are redirected to ALE)
 nnoremap rr :ALEReset<CR>
 nnoremap nw :set nowrap<CR>
+nnoremap nc :set conceallevel=0<CR>
 
-" Coc.nvim configurations (edited from the official github)
+" Coc.nvim CONFIGURATIONS (EDITED FROM THE OFFICIAL GITHUB)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -300,7 +306,7 @@ endif
 " FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" vim files
+" VIM FILES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType vim set shiftwidth=4
 autocmd FileType vim set textwidth=79
@@ -309,14 +315,14 @@ autocmd FileType vim set colorcolumn=80
 autocmd FileType vim let b:delimitMate_quotes = "' ` $"
 autocmd FileType vim let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
-" shell scripts
+" SHELL SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType sh,bash,zsh set shiftwidth=4
 autocmd FileType sh,bash,zsh set textwidth=79
 autocmd FileType sh,bash,zsh set expandtab
 autocmd FileType sh,bash,zsh set colorcolumn=80
 
-" python scripts
+" PYTHON SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_python_black_options = '--line-length=79'
 autocmd FileType python set shiftwidth=4
@@ -343,7 +349,15 @@ autocmd FileType python nnoremap ca :call CondaActivate()<CR><CR>
 " reset the original python path for pyright
 autocmd FileType python call CondaDeactivate()
 
-" latex and biblatex
+" R SCRIPTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType r set shiftwidth=2
+autocmd FileType r set textwidth=79
+autocmd FileType r set expandtab
+autocmd FileType r set colorcolumn=80
+autocmd BufNewFile,BufRead *.Rprofile set ft=r
+
+" LATEX AND BIBLATEX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 " zathura forward search
@@ -364,7 +378,7 @@ autocmd FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\
 autocmd FileType bib set shiftwidth=2
 autocmd FileType bib set expandtab
 
-" markdown
+" MARKDOWN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " disable conceal in math mode
 let g:tex_conceal = ""
@@ -384,7 +398,7 @@ autocmd FileType markdown set noautoindent
 autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
-" json
+" JSON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType json set shiftwidth=4
 
@@ -397,3 +411,9 @@ autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_lint_on_text_changed = 
 autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_lint_on_enter = 0
 " Disable also Coc (note that must be b, not g)
 autocmd BufNewFile,BufRead *sshfs_mountpoint/* let b:coc_enabled = 0
+
+
+" CONF FOR MULTIPLE FILETYPES
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" disable conceal globally for some filetypes, it is more an hassle than a perk
+autocmd FileType tex,bib,markdown set conceallevel=0
