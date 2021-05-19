@@ -64,7 +64,7 @@ The folder installed_packages is an update list of ll the packages present on my
 - Singularity can run a proprietary container file and also docker containers
 - GPU containers can be run but rely on the host CUDA toolkit
 - The variable SINGULARITY_TMPDIR must be set ot a writeable directory when building containers
-  - I export the variable in ``.zshenv`
+  - I export the variable in `.zshenv`
 
 ## Scientific software
 
@@ -108,7 +108,7 @@ The folder installed_packages is an update list of ll the packages present on my
   - Given the problem for TTY switching with Nvidia, do not use the lock when in Nvidia mode
     - If the screen gets locked in nvidia mode: press space, then write the passwrd and press enter. The lockscreen is working even if the screen no
     - After unlocking like this once, then the screen lock works in nvidia mode until the next logout
-  - Inhibition of the lockscreen is done with exam_mode.sh and inhibited with exam_mode_undo.sh
+  - Inhibition of the lockscreen is done with `exam_mode.sh` and inhibited with `exam_mode_undo.sh`
     - They just call xset and disable/enable blanking and screen poweroff
 
 ## Login Manager
@@ -340,4 +340,21 @@ jupyter lab --no-browser --port=9999
 
 ```
 tunnel_jupyterlab.sh <user@host> <<port>>
+```
+
+#### Jupyterlab extensions
+
+- Extensions are installed with `jupyter labextension install <ext_name>`
+
+##### Code formatting
+
+- I use `@ryantam626/jupyterlab_code_formatter`, which uses an underlying installation of black or other formatters
+- It provides a "Format cell" entry in the right click menu for a cell
+- Installation (restart jupyterlab afterwards):
+
+```
+pip install jupyterlab_code_formatter
+jupyter labextension install @ryantam626/jupyterlab_code_formatter
+pip install black isort
+jupyter server extension enable --py jupyterlab_code_formatter --user
 ```
