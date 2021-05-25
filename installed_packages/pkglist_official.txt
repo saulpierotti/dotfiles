@@ -149,6 +149,7 @@ john
 kdenlive
 kitty
 konsole
+kruler
 less
 libreoffice-extension-texmaths
 libreoffice-fresh
