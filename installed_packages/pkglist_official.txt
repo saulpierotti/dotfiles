@@ -7,6 +7,7 @@ android-udev
 arandr
 arc-gtk-theme
 aria2
+atool
 atop
 audacity
 autoconf
