@@ -1,6 +1,6 @@
 # GRUB boot loader configuration
 
-GRUB_DEFAULT="Advanced options for Arch Linux>Arch Linux, with Linux linux-lts"
+GRUB_DEFAULT="0"
 GRUB_TIMEOUT="5"
 GRUB_DISTRIBUTOR="Arch"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet apparmor=1 lsm=lockdown,yama,apparmor systemd.unified_cgroup_hierarchy=false"
