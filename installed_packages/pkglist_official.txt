@@ -192,7 +192,6 @@ neovim
 netctl
 network-manager-applet
 networkmanager-openvpn
-nim
 nmap
 nodejs
 ntfs-3g
