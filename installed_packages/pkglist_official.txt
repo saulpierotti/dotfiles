@@ -233,11 +233,8 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
-pyalpm
 pymol
 python-black
-python-commonmark
-python-future
 python-jedi
 python-libarchive-c
 python-matplotlib
