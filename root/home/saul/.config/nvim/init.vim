@@ -359,18 +359,13 @@ autocmd BufNewFile,BufRead *.Rprofile set ft=r
 
 " LATEX AND BIBLATEX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Runs a script that cleans out tex build files whenever I close out of a .tex file.
-" zathura forward search
-function! SyncTexForward()
-    let execstr = "silent !zathura --synctex-forward ".line(".").":".col(".").":%:p %:p:r.pdf &"
-    exec execstr
-endfunction
 let g:vimtex_latexmk_build_dir = './build'
 let g:vimtex_latexmk_progname = 'nvr'
 let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
+" Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear.sh %
-autocmd FileType tex nmap <Leader>f :call SyncTexForward()<CR>
+autocmd FileType tex nmap <Leader>f :VimtexView<CR>
 " to be same with the deafult linting
 autocmd FileType tex set shiftwidth=8
 autocmd FileType tex,bib let b:delimitMate_quotes = "\" ' ` $"

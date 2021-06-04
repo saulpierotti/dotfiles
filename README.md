@@ -291,6 +291,13 @@ update-source-proplist alsa_input.hw_Loopback_1_0  device.description="Droidcam"
 - ALE uses latexindent, which is included in texlive-most, but misses the perl module `perl-log-dispatch` (in the AUR)
 - I use coc-texlab for completion
 
+### Zathura forward and backward synctex
+
+- This functionality allows to jump easily from pdf and tex code when reading
+- I use vimtex on the nvim side and zathura is configured with the line `set synctex true` and `set synctex-editor-command "nvr --remote-silent +%{line} %{input}"` in `.config/zathura/zathurarc`
+- To go to the source from zathura just Ctr + click on a word
+- To jump to the pdf from nvim use :VimtexView or `<leader>f`
+
 ## Desktop widget
 
 - I use conky, configured in `./config/conky/conky.conf`
