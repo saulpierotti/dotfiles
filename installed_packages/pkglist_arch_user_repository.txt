@@ -49,5 +49,4 @@ ttf-ms-fonts
 twmn-git
 virtualbox-ext-oracle
 xkblayout-state-git
-yay-git
 zoom
