@@ -404,5 +404,4 @@ yelp
 zathura
 zathura-djvu
 zathura-pdf-mupdf
-zram-generator
 zsh
