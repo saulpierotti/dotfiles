@@ -31,7 +31,6 @@ oreo-nord-cursors-git
 perl-log-dispatch
 pikaur
 polybar
-python-pmw
 python-pympress
 python35
 python36
