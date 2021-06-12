@@ -36,6 +36,16 @@ The folder installed_packages is an update list of ll the packages present on my
 - I removed the vanilla kernel to avoid 2 lengthy compilations at every package update
 - I keep also the LTS kernel and its headers as a backup
 - Kernel parameters are specified in `/etc/default/grub` (see GRUB section)
+- I use the package `irqbalance` to balance loads across cores (I also enable the systemd service)
+- I use the package `ananicy` to automatically renice processes (I also enable the systemd service)
+
+## Swap
+
+- I use a zram device, which is a compressed file on RAM
+  - Load the zram kernel module by writing `zram` in `/etc/modules-load.d/zram.conf`
+  - Set number of devices in `/etc/modules-load.d/zram.conf` by writing `options zram num_devices=2`
+  - Create the udev rule `/etc/udev/rules.d/99-zram.rules` writing `KERNEL=="zram0", ATTR{disksize}="7G" RUN="/usr/bin/mkswap /dev/zram0", TAG+="systemd"`
+  - Add the device to `/etc/fstab` writing `/dev/zram0 none swap defaults 0 0`
 
 ## GPU
 
