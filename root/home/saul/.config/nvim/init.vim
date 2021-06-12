@@ -62,6 +62,8 @@ Plug 'neoclide/coc-vimtex', {'do': 'yarn install --forzen-lockfile'}
 Plug 'josa42/coc-sh', {'do': 'yarn install --forzen-lockfile'}
 " autocompletions for json settings in coc config
 Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}
+" R lsp
+Plug 'neoclide/coc-r-lsp', {'do': 'yarn install --forzen-lockfile'}
 
 " Debugger for python, C, and other languages
 Plug 'puremourning/vimspector'
@@ -329,25 +331,6 @@ autocmd FileType python set shiftwidth=4
 autocmd FileType python set textwidth=79
 autocmd FileType python set expandtab
 autocmd FileType python set colorcolumn=80
-" change the conda environment in ALE and pyright (Coc python LSP)
-" NOTE: this works only once, if you want to change twice, close and open vim
-" again
-function! CondaActivate()
-" this is provided by vim-conda and works for ALE
-    CondaChangeEnv
-" set the first entry in $PATH (set by the previous command) to the Coc config file
-    !pyright_change_env.sh
-    ALEReset
-    ALELint
-endfunction
-function! CondaDeactivate()
-    !sed -i "s@\"python.pythonPath\":.*@\"python.pythonPath\": \"python\",@" "$HOME/.config/nvim/coc-settings.json"
-    ALEReset
-    ALELint
-endfunction
-autocmd FileType python nnoremap ca :call CondaActivate()<CR><CR>
-" reset the original python path for pyright
-autocmd FileType python call CondaDeactivate()
 
 " R SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -259,6 +259,7 @@ rofi
 rsync
 rygel
 s-nail
+schedtool
 screen
 seahorse
 sed
