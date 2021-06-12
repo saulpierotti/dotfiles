@@ -1,5 +1,4 @@
 adwaita-qt
-aliview
 ananicy
 ancient-packages
 antigen
