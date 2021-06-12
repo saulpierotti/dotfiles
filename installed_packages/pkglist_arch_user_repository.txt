@@ -30,7 +30,6 @@ optimus-manager
 optimus-manager-qt
 oreo-cursors-git
 oreo-nord-cursors-git
-pandoc-citeproc
 perl-log-dispatch
 pikaur
 polybar
