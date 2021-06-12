@@ -12,7 +12,6 @@ dssp
 flashplugin
 gfxbench
 gnome-encfs-manager-bin
-gnome-getting-started-docs
 google-chrome
 gstreamer0.10-base
 hhsuite
