@@ -7,7 +7,6 @@ android-udev
 arandr
 arc-gtk-theme
 aria2
-asciidoc
 atool
 atop
 audacity
@@ -47,7 +46,6 @@ dmenu
 dnsmasq
 docker
 docker-compose
-dpkg
 e2fsprogs
 efibootmgr
 encfs
