@@ -28,6 +28,7 @@ optimus-manager
 optimus-manager-qt
 oreo-cursors-git
 oreo-nord-cursors-git
+otf-san-francisco
 perl-log-dispatch
 pikaur
 polybar
