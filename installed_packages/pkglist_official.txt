@@ -307,7 +307,6 @@ tracker
 tracker-miners
 transmission-gtk
 trash-cli
-ttf-croscore
 ttf-fira-code
 ttf-font-awesome
 ttf-inconsolata
