@@ -17,6 +17,7 @@ google-chrome
 gstreamer0.10-base
 hhsuite
 hmmer
+httpfs2-2gbplus
 jalview
 masterpdfeditor
 mprime
