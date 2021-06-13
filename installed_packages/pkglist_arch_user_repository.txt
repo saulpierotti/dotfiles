@@ -28,7 +28,6 @@ optimus-manager
 optimus-manager-qt
 oreo-cursors-git
 oreo-nord-cursors-git
-pacnews-neovim-git
 perl-log-dispatch
 pikaur
 polybar
