@@ -24,6 +24,7 @@ export TERM="xterm-kitty"
 # text editor
 export EDITOR="nvim"
 export VISUAL="nvim"
+export DIFFPROG="nvim -d"
 
 # for --user pip packages
 export PATH="${PATH}:/home/saul/.local/bin"
