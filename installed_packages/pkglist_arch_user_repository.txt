@@ -44,6 +44,7 @@ teamviewer
 timeshift
 timeshift-autosnap
 ttf-ms-fonts
+ttf-windows
 twmn-git
 virtualbox-ext-oracle
 xkblayout-state-git
