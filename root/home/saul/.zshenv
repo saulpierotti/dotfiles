@@ -46,7 +46,6 @@ export KEY_MODELLER="MODELIRANJE"
 
 # ranger
 export RANGER_START="/home/saul/Desktop"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # for singularity to allow builds (cannot write to /tmp)
 export SINGULARITY_TMPDIR='/home/saul/.singularity_tmpdir'
