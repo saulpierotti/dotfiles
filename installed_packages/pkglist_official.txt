@@ -53,7 +53,7 @@ eog
 epiphany
 ethtool
 evince
-exfat-utils
+exfatprogs
 ext4magic
 fakeroot
 feh

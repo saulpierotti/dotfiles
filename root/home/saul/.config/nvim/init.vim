@@ -347,7 +347,6 @@ let g:vimtex_latexmk_progname = 'nvr'
 let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
-autocmd VimLeave *.tex !texclear.sh %
 autocmd FileType tex nmap <Leader>f :VimtexView<CR>
 " to be same with the deafult linting
 autocmd FileType tex set shiftwidth=8
