@@ -84,7 +84,6 @@ git-crypt
 git-lfs
 glibc
 gnome-books
-gnome-boxes
 gnome-calculator
 gnome-calendar
 gnome-characters
