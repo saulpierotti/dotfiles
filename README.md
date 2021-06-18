@@ -58,9 +58,14 @@ The folder installed_packages is an update list of ll the packages present on my
 - For Nvidia I use the `nvidia-dkms` driver (since I am using the linux-zen kernel)
 - CUDA works but my vRAM is limited (2Gb) so heavy things cannot be run with it
 
-## Containers
+## Containers and virtualization
 
-- I have both Docker and Singularity
+- I have both Docker and Singularity for container management
+- Virtualbox for virtualization
+
+### Virtualbox
+
+- For Windows 10 I can use the host product key on the guest using the script `~/.scripts/virtualbox_windows_oem_transfer.sh <machine_name>`
 
 ### Docker
 
