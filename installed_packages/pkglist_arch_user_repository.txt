@@ -18,6 +18,7 @@ gstreamer0.10-base
 hhsuite
 hmmer
 jalview
+libsepol
 masterpdfeditor
 mprime
 nautilus-admin
