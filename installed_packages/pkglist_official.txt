@@ -10,6 +10,7 @@ aria2
 atool
 atop
 audacity
+augeas
 autoconf
 automake
 avidemux-qt
@@ -32,7 +33,9 @@ cheese
 cmake
 cmatrix
 conky
+containers-common
 coreutils
+cpio
 cronie
 cryptsetup
 cuda
@@ -40,7 +43,9 @@ cudnn
 cups
 cyrus-sasl
 dconf-editor
+debootstrap
 device-mapper
+dhcpcd
 diffutils
 dmenu
 dnsmasq
@@ -55,6 +60,7 @@ ethtool
 evince
 exfatprogs
 ext4magic
+f2fs-tools
 fakeroot
 feh
 file
@@ -114,6 +120,7 @@ gnome-tweaks
 gnome-user-docs
 gnome-user-share
 gnome-weather
+gobject-introspection
 gpart
 gparted
 grep
@@ -132,6 +139,7 @@ gvfs-nfs
 gvfs-smb
 gzip
 hey
+hivex
 htmldoc
 htop
 hwloc
@@ -142,6 +150,7 @@ imlib2
 inetutils
 inkscape
 intel-ucode
+intltool
 iproute2
 iputils
 irqbalance
@@ -153,6 +162,9 @@ kitty
 konsole
 kruler
 less
+libewf
+libguestfs
+libldm
 libreoffice-extension-texmaths
 libreoffice-fresh
 libtool
@@ -171,12 +183,15 @@ linux-zen-docs
 linux-zen-headers
 logrotate
 lostfiles
+lrzip
 lshw
 lsof
+lsscsi
 luit
 lvm2
 lxappearance
 lynx
+lzop
 m4
 make
 man-db
@@ -193,6 +208,7 @@ neovim
 netctl
 network-manager-applet
 networkmanager-openvpn
+nilfs-utils
 nmap
 nodejs
 ntfs-3g
@@ -220,6 +236,7 @@ pdftk
 perl
 perl-file-homedir
 perl-file-mimeinfo
+perl-libintl-perl
 perl-yaml-tiny
 picom
 pkgconf
@@ -240,6 +257,7 @@ python-jedi
 python-libarchive-c
 python-matplotlib
 python-pandas
+python-passlib
 python-pip
 python-pipenv
 python-pyflakes
@@ -259,6 +277,7 @@ reflector
 reiserfsprogs
 rmlint
 rofi
+rpcsvc-proto
 rsync
 rygel
 s-nail
@@ -270,13 +289,19 @@ shellcheck
 shfmt
 signal-desktop
 simple-scan
+skopeo
 sl
+sleuthkit
 slock
 speedtest-cli
 sshfs
+strace
 sudo
+supermin
 sushi
+swig
 sysfsutils
+syslinux
 system-config-printer
 systemd
 systemd-sysvcompat
@@ -402,6 +427,7 @@ xournalpp
 xpad
 xsel
 xterm
+yara
 yarn
 yelp
 zathura
