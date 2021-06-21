@@ -156,7 +156,6 @@ less
 libreoffice-extension-texmaths
 libreoffice-fresh
 libtool
-libxml++
 licenses
 light
 lightdm
