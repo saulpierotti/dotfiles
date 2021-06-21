@@ -273,6 +273,7 @@ simple-scan
 sl
 slock
 speedtest-cli
+spice-vdagent
 sshfs
 sudo
 sushi
