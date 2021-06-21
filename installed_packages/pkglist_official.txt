@@ -322,8 +322,6 @@ vi
 vim
 vino
 virt-manager
-virtualbox
-virtualbox-host-dkms
 vnstat
 vulkan-intel
 w3m
