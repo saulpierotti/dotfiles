@@ -18,7 +18,6 @@ gstreamer0.10-base
 hhsuite
 hmmer
 jalview
-libselinux
 masterpdfeditor
 mprime
 nautilus-admin
@@ -49,5 +48,6 @@ ttf-ms-fonts
 twmn-git
 virtualbox-ext-oracle
 xkblayout-state-git
+xz-static
 yay-bin
 zoom
