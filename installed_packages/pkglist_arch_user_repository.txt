@@ -46,6 +46,7 @@ timeshift
 timeshift-autosnap
 ttf-ms-fonts
 twmn-git
+virt-bootstrap-git
 virtualbox-ext-oracle
 xkblayout-state-git
 xz-static
