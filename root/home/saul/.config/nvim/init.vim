@@ -346,9 +346,8 @@ let g:vimtex_latexmk_build_dir = './build'
 let g:vimtex_latexmk_progname = 'nvr'
 let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
-" Runs a script that cleans out tex build files whenever I close out of a .tex file.
+autocmd BufNewFile,BufRead *.aux set ft=tex
 autocmd FileType tex nmap <Leader>f :VimtexView<CR>
-" to be same with the deafult linting
 autocmd FileType tex set shiftwidth=8
 autocmd FileType tex,bib let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
