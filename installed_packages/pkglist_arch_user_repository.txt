@@ -12,6 +12,7 @@ droidcam
 dssp
 flashplugin
 gfxbench
+gladtex
 gnome-encfs-manager-bin
 google-chrome
 gstreamer0.10-base

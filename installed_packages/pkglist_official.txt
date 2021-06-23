@@ -182,7 +182,6 @@ make
 man-db
 man-pages
 materia-gtk-theme
-maven
 mdadm
 mlocate
 mpv
