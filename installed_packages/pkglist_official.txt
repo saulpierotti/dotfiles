@@ -114,8 +114,6 @@ gnome-tweaks
 gnome-user-docs
 gnome-user-share
 gnome-weather
-go
-go-tools
 gpart
 gparted
 grep
