@@ -1,4 +1,4 @@
-Bitwarden	com.bitwarden.desktop	1.26.5	stable	system
+Bitwarden	com.bitwarden.desktop	1.27.0	stable	system
 Youp for whatsapp	com.gigitux.youp	2.0	stable	system
 Microsoft Teams	com.microsoft.Teams	1.4.00.13653	stable	system
 Skype	com.skype.Client	8.73.0.92	stable	system

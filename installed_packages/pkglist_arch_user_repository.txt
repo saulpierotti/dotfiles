@@ -45,6 +45,7 @@ snapd
 teamviewer
 timeshift
 timeshift-autosnap
+tor-browser
 ttf-ms-fonts
 twmn-git
 virt-bootstrap-git
