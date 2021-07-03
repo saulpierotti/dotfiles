@@ -50,6 +50,7 @@ ttf-ms-fonts
 twmn-git
 virt-bootstrap-git
 xkblayout-state-git
+xorg-font-utils
 xz-static
 yay-bin
 zoom
