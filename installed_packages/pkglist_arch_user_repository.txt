@@ -29,6 +29,7 @@ optimus-manager
 optimus-manager-qt
 oreo-cursors-git
 oreo-nord-cursors-git
+otf-futura-renner
 otf-san-francisco
 perl-log-dispatch
 pikaur
@@ -50,7 +51,6 @@ ttf-ms-fonts
 twmn-git
 virt-bootstrap-git
 xkblayout-state-git
-xorg-font-utils
 xz-static
 yay-bin
 zoom
