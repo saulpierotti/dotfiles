@@ -270,6 +270,7 @@ shellcheck
 shfmt
 signal-desktop
 simple-scan
+singularity-container
 sl
 slock
 speedtest-cli
