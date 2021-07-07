@@ -220,6 +220,7 @@ pdftk
 perl
 perl-file-homedir
 perl-file-mimeinfo
+perl-term-readline-gnu
 perl-yaml-tiny
 picom
 pkgconf
