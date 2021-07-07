@@ -31,7 +31,6 @@ oreo-cursors-git
 oreo-nord-cursors-git
 otf-san-francisco
 perl-log-dispatch
-perl-term-shellui
 pikaur
 polybar
 python-pympress
@@ -45,6 +44,7 @@ snapd
 teamviewer
 timeshift
 timeshift-autosnap
+tllocalmgr-git
 tor-browser
 ttf-ms-fonts
 twmn-git
