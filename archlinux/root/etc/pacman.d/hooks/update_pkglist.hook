@@ -1,0 +1,12 @@
+# save a list of the installed packages to rebuild my system if needed
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Writing a new log files in ~/.pkg_history...
+When = PostTransaction
+Exec = /bin/su -s /bin/bash -c "~saul/.scripts/list_pkgs.sh" saul

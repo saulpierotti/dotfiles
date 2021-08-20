@@ -1,0 +1,7 @@
+Name                    Version                     Rev    Tracking       Publisher   Notes
+core                    16-2.51.3                   11420  latest/stable  canonical*  core
+core18                  20210611                    2074   latest/stable  canonical*  base
+gnome-3-28-1804         3.28.0-19-g98f9e67.98f9e67  161    latest/stable  canonical*  -
+gtk-common-themes       0.1-52-gb92ac40             1515   latest/stable  canonical*  -
+wine-platform-5-stable  5.0.3                       16     latest/stable  mmtrt       -
+wine-platform-runtime   v1.0                        230    latest/stable  mmtrt       -

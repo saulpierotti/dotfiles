@@ -1,0 +1,43 @@
+# Default options
+alias ls='ls --color=auto'
+alias grep="grep --color=auto"
+alias xz='nice xz --threads=0'
+alias tar='nice tar'
+
+# built-in commands aliases
+alias q="exit"
+alias v="$VISUAL"
+alias c="clear"
+alias r="reset"
+alias g="git"
+alias sv="sudoedit"
+alias SS="sudo systemctl"
+alias vpn="nordvpn"
+alias gping="ping google.com"
+alias py="python3"
+
+# for kitty, since xterm-kitty is not widespread
+# and causes colorless prompts
+alias ssh="kitty_ssh.sh"
+
+# commot tasks wrappers
+alias hotspot='nmcli connection up Hotspot'
+
+# custom scripts
+alias reducepdf="reducepdf.sh"
+alias usb="mountdev.sh"
+alias awake="xscreensaver_awake.sh"
+alias gitup="git_update.sh"
+alias gpgmulti="encrypt_decrypt_gpg.sh"
+
+# frequent tasks
+alias clipboard="xclip -selection clipboard -i"
+alias ca="conda activate"
+alias jl="jupyter lab"
+
+# config shortcuts
+alias conf_nvim="$VISUAL /home/saul/.config/nvim/init.vim"
+alias conf_polybar="$VISUAL /home/saul/.config/polybar/config"
+alias conf_i3="$VISUAL /home/saul/.config/i3/config"
+alias conf_kitty="$VISUAL /home/saul/.config/kitty/kitty.conf"
+
