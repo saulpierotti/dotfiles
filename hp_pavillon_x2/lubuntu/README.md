@@ -17,3 +17,6 @@ From the Kvantum chooser then I select my preferred theme.
 
 ## Power management
 When the management options are set to nothing it actually shuts down the system. Set it to suspend.
+
+## Terminal
+Kitty makes the system crash randomly. I use the default terminal
