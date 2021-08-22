@@ -16,10 +16,6 @@ ranger() {
 #export GTK2_RC_FILES="/usr/share/themes/Adapta-Nokto"
 #export GTK_THEME="Adapta-Nokto"
 
-# set default terminal
-export TERMINAL="kitty"
-export TERM="xterm-kitty"
-
 # text editor
 export EDITOR="nvim"
 export VISUAL="nvim"

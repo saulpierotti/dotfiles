@@ -3,6 +3,11 @@
 For the small Hp Pavillon x2, even Xubuntu crashes regularly.
 Lubuntu is to date the only stable distro.
 
+## Crashes
+There are some random crashes still, mostly related to GPU-intesive load.
+OBS crashes regularly. Zoom did once. Firefox sometimes. Kitty sometimes.
+After installing mesa-utils it seems to have improved.
+
 ## Encryption
 It is possible to set up full disk encryption using the graphical installer.
 Swap is to a file in the encryptd partition.
