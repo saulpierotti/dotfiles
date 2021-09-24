@@ -1,0 +1,28 @@
+# Default options
+alias grep="grep --color=auto"
+alias xz='nice xz --threads=0'
+alias tar='nice tar'
+
+# built-in commands aliases
+alias q="exit"
+alias v="nvim"
+alias c="clear"
+alias r="reset"
+alias g="git"
+alias gping="ping google.com"
+alias py="python3"
+
+# custom scripts
+alias reducepdf="reducepdf.sh"
+alias usb="mountdev.sh"
+alias awake="xscreensaver_awake.sh"
+alias gitup="git_update.sh"
+alias gpgmulti="encrypt_decrypt_gpg.sh"
+
+# frequent tasks
+alias ca="conda activate"
+alias jl="jupyter lab"
+
+# config shortcuts
+alias conf_nvim="$VISUAL /home/saul/.config/nvim/init.vim"
+
