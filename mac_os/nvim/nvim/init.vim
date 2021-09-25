@@ -10,7 +10,7 @@ let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 " airline statusbar
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 " git wrapper, just use :Git or :G to run git commands
 " it has several improvements over plain old :!git
 Plug 'tpope/vim-fugitive'
@@ -341,8 +341,6 @@ autocmd BufNewFile,BufRead *.Rprofile set ft=r
 " LATEX AND BIBLATEX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vimtex_latexmk_build_dir = './build'
-let g:vimtex_latexmk_progname = 'nvr'
-let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 autocmd BufNewFile,BufRead *.aux set ft=tex
 autocmd FileType tex nmap <Leader>f :VimtexView<CR>

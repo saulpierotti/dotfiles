@@ -40,3 +40,6 @@ bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
 # pure theme
 autoload -U promptinit; promptinit
 prompt pure
+
+export VISUAL=nvim;
+export EDITOR=nvim;
