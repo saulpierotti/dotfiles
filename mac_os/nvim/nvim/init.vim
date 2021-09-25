@@ -10,7 +10,7 @@ let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 " airline statusbar
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 " git wrapper, just use :Git or :G to run git commands
 " it has several improvements over plain old :!git
 Plug 'tpope/vim-fugitive'
@@ -73,7 +73,7 @@ call plug#end()
 " GENERAL SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " read .zshrc and aliases
-set shell=zsh\ -i
+set shell=zsh
 " use the system clipboard
 set clipboard=unnamedplus
 " activate mouse
