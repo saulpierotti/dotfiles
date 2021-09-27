@@ -1,0 +1,19 @@
+# Default options
+alias ls='ls --color=auto'
+alias grep="grep --color=auto"
+alias xz='nice xz --threads=0'
+alias tar='nice tar'
+
+# built-in commands aliases
+alias q="exit"
+alias v="$VISUAL"
+alias c="clear"
+alias r="reset"
+alias g="git"
+alias gping="ping google.com"
+alias py="python"
+alias rmt="trash-put"
+
+# custom scripts
+alias reducepdf="reducepdf.sh"
+alias gitup="git_update.sh"
