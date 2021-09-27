@@ -6,6 +6,7 @@
 brew install python
 pip3 install neovim
 brew install neovim
+brew install yarn # needed to auto-install coc extensions
 ln -s $(pwd)/nvim ~/.config
 
 # install vim-plug
