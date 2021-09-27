@@ -6,4 +6,4 @@
 # Use Exec=kitty -e command and set terminal to false.
 
 brew install kitty
-ln -s $(pwd)/kitty ~/.config
+ln -s $(pwd)/kitty ~/.config/kitty
