@@ -4,6 +4,7 @@ pkg install -y openssh # for git ssh
 pkg install -y git
 pkg install -y python # includes pip
 pkg install -y ranger
+pkg install yarn # needed to auto-install coc extensions
 pkg install -y neovim
 pkg install -y nodejs # needed for CocNvim
 pkg install -y gnupg

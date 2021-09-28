@@ -4,6 +4,7 @@
 # CoC will report some errors but just press R to continue
 
 sudo apt install neovim
+sudo apt install yarn # needed to auto-install coc extensions
 ln -s $(pwd)/nvim ~/.config
 
 # install vim-plug
