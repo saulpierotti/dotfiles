@@ -33,4 +33,4 @@ export PATH="${PATH}:/Users/saul/.bioscripts/bash"
 export KEY_MODELLER="MODELIRANJE"
 
 # ranger
-export RANGER_START="/Users/saul/Desktop"
+export RANGER_START="."

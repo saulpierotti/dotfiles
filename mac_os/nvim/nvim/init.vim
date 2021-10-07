@@ -72,6 +72,7 @@ call plug#end()
 
 " GENERAL SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " read .zshrc and aliases
 set shell=zsh
 " use the system clipboard
@@ -367,6 +368,7 @@ let g:vim_markdown_strikethrough = 1
 autocmd FileType markdown set shiftwidth=2
 autocmd FileType markdown set expandtab
 autocmd FileType markdown set noautoindent
+autocmd FileType markdown set spell spelllang=en_gb
 autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
