@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # After installing open neovim and run :PlugInstall
-# CoC will report some errors but just press R to continue
+# CoC will report some errors if node.js is not installed
 
 sudo apt install neovim
 sudo apt install yarn # needed to auto-install coc extensions

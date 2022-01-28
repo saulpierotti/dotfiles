@@ -76,6 +76,8 @@ call plug#end()
 set shell=zsh\ -i
 " use the system clipboard
 set clipboard=unnamedplus
+" use my custom spellfile
+set spellfile=~/.dotfiles/vim_spell/en.utf-8.add
 " activate mouse
 set mouse=a
 " hide the --INSERT-- and other status (since it is shown by airline)
