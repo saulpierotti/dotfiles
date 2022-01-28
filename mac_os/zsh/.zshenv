@@ -22,7 +22,11 @@ export DIFFPROG="nvim -d"
 
 # for --user pip packages
 export PATH="${PATH}:/Users/saul/.local/bin"
+export PATH="${PATH}:/Users/saul/Library/Python/3.9/bin"
 export PYTHONPATH="${PYTHONPATH}:/Users/saul/.local/lib"
+
+# for conda brew cask
+export PATH="${PATH}:/usr/local/anaconda3/bin"
 
 # my custom scripts
 export PATH="${PATH}:/Users/saul/.scripts"

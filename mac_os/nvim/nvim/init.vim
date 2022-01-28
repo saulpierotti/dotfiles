@@ -44,6 +44,10 @@ Plug 'plasticboy/vim-markdown'
 " I installed also its Coc integration
 Plug 'lervag/vimtex'
 
+" Syntax highlighting and linting for Snakefiles
+Plug 'snakemake/snakemake', {'rtp': 'misc/vim'}
+Plug 'snakemake/snakefmt'
+
 " this controls the linting in python and other languages
 Plug 'dense-analysis/ale' 
 
@@ -331,9 +335,19 @@ autocmd FileType python set textwidth=79
 autocmd FileType python set expandtab
 autocmd FileType python set colorcolumn=80
 
+" SNAKEFILES
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_python_black_options = '--line-length=79'
+autocmd BufNewFile,BufRead Snakefile,*.smk set filetype=snakemake
+autocmd FileType snakemake set shiftwidth=4
+autocmd FileType snakemake set textwidth=79
+autocmd FileType snakemake set expandtab
+autocmd FileType snakemake set colorcolumn=80
+autocmd FileType snakemake autocmd BufWritePre <buffer> execute ':Snakefmt'
+
 " R SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType r set shiftwidth=2
+autocmd FileType r set shiftwidth=4
 autocmd FileType r set textwidth=79
 autocmd FileType r set expandtab
 autocmd FileType r set colorcolumn=80

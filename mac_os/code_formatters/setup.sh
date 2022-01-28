@@ -5,3 +5,4 @@ brew install isort
 brew install prettier
 brew install latexindent
 brew install shfmt
+brew install snakefmt
