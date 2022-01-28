@@ -8,6 +8,7 @@ alias v="nvim"
 alias c="clear"
 alias r="reset"
 alias py="python3"
+alias gitup="git_update.sh"
 
 # codon cluster specific
 alias rstudio-singularity="echo -e '\e]8;;http://$(hostname):8787\aAccess Rstudio server from: http://$(hostname):8787\e]8;;\a'; singularity exec --bind /hps/software/users/birney/saul/rstudio_singularity_required/run:/run,/hps/software/users/birney/saul/rstudio_singularity_required/var-lib-rstudio-server:/var/lib/rstudio-server,/hps/software/users/birney/saul/rstudio_singularity_required/database.conf /hps/software/users/birney/saul/singularity_imgs/rstudio_4.0.4.sif rserver"

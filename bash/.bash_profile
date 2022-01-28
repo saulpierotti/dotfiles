@@ -9,6 +9,7 @@ fi
 PATH=$PATH:$HOME/bin
 PATH=$PATH:/hps/software/users/birney/saul/source_installs/bin
 PATH=$PATH:$HOME/.linuxbrew/bin
+PATH=$PATH:$HOME/.scripts
 PYTHONPATH=$PYTHONPATH:/hps/software/users/birney/saul/source_installs/bin
 
 export PATH
