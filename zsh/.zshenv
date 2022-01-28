@@ -26,13 +26,12 @@ export DIFFPROG="nvim -d"
 # ranger
 export RANGER_START="."
 
+# needs to be sourced here otherwise spack completion is not defined at login
+# and an error is raised
+source $(brew --prefix)/share/antigen/antigen.zsh
+
 # codon cluster specific
 export N_PREFIX="/hps/software/users/birney/saul"
-
-# This is put here instead of .zshrc since otherwise complete is not defined
-# for spack and gives an error
-# Load antigen
-source /hps/software/users/birney/saul/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
