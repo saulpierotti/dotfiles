@@ -325,3 +325,6 @@ mambaforge
 inline
 neovim
 plugin
+config
+MacOs
+Dotfiles

@@ -5,6 +5,6 @@ xcode-select --install
 Brew install antigen
 brew install zsh-async
 brew install pure
-ln -s $(pwd)/.zshrc ~/
-ln -s $(pwd)/.zshenv ~/
-ln -s $(pwd)/.zsh_aliases ~/
+ln -s $(pwd -P)/.zshrc ~
+ln -s $(pwd -P)/.zshenv ~
+ln -s $(pwd -P)/.zsh_aliases ~

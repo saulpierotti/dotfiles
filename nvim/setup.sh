@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # After installing open neovim and run :PlugInstall
-# CoC will report some errors but just press R to continue
+# If Coc gives errors is because you need to install node.js
 
 brew install python
 pip3 install neovim
