@@ -1,0 +1,6 @@
+#!/bin/sh
+# this is required by LighDM to load the env with zsh
+[[ -f ~/.zshenv ]] && source ~/.zshenv
+# dark theme in qt app
+export QT_QPA_PLATFORMTHEME=qt5ct
+prime-offload &
