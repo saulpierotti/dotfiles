@@ -1,11 +1,10 @@
 # avoid nested ranger instances
 ranger() {
-    RANGER_PATH="/hps/software/users/birney/saul/ranger/ranger.py"
     if [ -z "$RANGER_LEVEL" ]; then
 	if [ -z "$@" ]; then
-		python $RANGER_PATH "$RANGER_START"
+		ranger "$RANGER_START"
 	else
-		python $RANGER_PATH "$@"
+		ranger $RANGER_PATH "$@"
 	fi
     else
         exit
