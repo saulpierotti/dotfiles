@@ -164,7 +164,7 @@ nnoremap <C-l> :tabn<CR>
 nnoremap <Tab> :tabedit<Space>
 " call the complier script and show the output
 nnoremap <leader>c : !compiler.sh %:p<CR>
-nnoremap <leader>p : !show_output_mac.sh %:p<CR><CR>
+nnoremap <leader>p : !show_output.sh %:p<CR><CR>
 nnoremap <leader>r : !$TERMCMD -e ranger &<CR>
 " configure cross-program copy-paste
 vnoremap <C-c> "+y
