@@ -1,7 +1,5 @@
 # codon cluster specific
 fpath+=$HOME/.zsh/pure
-module load neovim-0.4.4-gcc-9.3.0-uvm3kan
-module load python-3.9.5-gcc-9.3.0-jtayjft
 module load singularity-3.7.0-gcc-9.3.0-dp5ffrp
 
 # Load my aliases
