@@ -4,7 +4,7 @@
 # If Coc gives errors is because you need to install node.js
 
 brew install python
-pip3 install pynvim # needed for some plugins
+pip3 install --user pynvim # needed for some plugins
 brew install neovim
 brew install yarn # needed to auto-install coc extensions
 ln -s $(pwd)/nvim ~/.config
