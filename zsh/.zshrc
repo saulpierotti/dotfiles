@@ -2,6 +2,19 @@
 fpath+=$HOME/.zsh/pure
 module load singularity-3.7.0-gcc-9.3.0-dp5ffrp
 
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# plugins
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle esc/conda-zsh-completion 
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle command-not-found
+
+# Tell Antigen that you're done.
+antigen apply
+
 # Load my aliases
 source ~/.zsh_aliases
 
@@ -21,9 +34,15 @@ bindkey '^e' edit-command-line
 # reverse search
 bindkey '^R' history-incremental-search-backward
 
+# Use ranger to switch directories and bind it to ctrl-o
+bindkey -s '^o' 'source ranger_launcher.sh\n'
+
 # pure theme
-autoload -Uz promptinit; promptinit
+autoload -U promptinit compinit bashcompinit && promptinit && compinit && bashcompinit
 prompt pure
+
+# add snakemake completion
+compdef _gnu_generic snakemake
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
