@@ -38,11 +38,11 @@ bindkey -s '^o' 'source ranger_launcher.sh\n'
 bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
 
 # pure theme
-autoload -U promptinit; promptinit
+autoload -U promptinit compinit bashcompinit && promptinit && compinit && bashcompinit
 prompt pure
 
-export VISUAL=nvim;
-export EDITOR=nvim;
+# add snakemake completion
+compdef _gnu_generic snakemake
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
