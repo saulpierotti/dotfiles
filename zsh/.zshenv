@@ -13,7 +13,7 @@ ranger() {
 
 # set default terminal
 export TERMINAL="kitty"
-export TERM="xterm-kitty"
+export TERM="xterm-256color"
 
 # text editor
 export EDITOR="nvim"
