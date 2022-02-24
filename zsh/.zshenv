@@ -13,10 +13,6 @@ ranger() {
 
 export PATH=$PATH:"/hps/software/users/birney/saul/n/versions/node/17.3.0/bin"
 
-# set default terminal
-export TERMINAL="kitty"
-export TERM="xterm-kitty"
-
 # text editor
 export EDITOR="nvim"
 export VISUAL="nvim"
