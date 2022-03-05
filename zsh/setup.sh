@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt install zsh
+chsh -s /usr/bin/zsh 
 sudo apt install zsh-antigen
 sudo apt install npm
 sudo npm install --global pure-prompt
