@@ -47,6 +47,8 @@ Plug 'lervag/vimtex'
 " Syntax highlighting and linting for Snakefiles
 Plug 'snakemake/snakemake', {'rtp': 'misc/vim'}
 Plug 'snakemake/snakefmt'
+" nextflow synthax highlighting
+Plug 'Mxrcon/nextflow-vim'
 
 " this controls the linting in python and other languages
 Plug 'dense-analysis/ale' 
@@ -126,6 +128,10 @@ let g:ale_fixers = {
     \   ],
     \   'sh': [
     \       'shfmt',
+    \       'remove_trailing_lines',
+    \       'trim_whitespace',
+    \   ],
+    \   'nextflow': [
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
@@ -345,6 +351,15 @@ autocmd FileType snakemake set expandtab
 autocmd FileType snakemake set colorcolumn=80
 autocmd FileType snakemake autocmd BufWritePre <buffer> execute ':Snakefmt'
 
+" NEXTFLOW
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType nextflow set shiftwidth=4
+autocmd FileType nextflow set textwidth=89
+autocmd FileType nextflow set expandtab
+autocmd FileType nextflow set colorcolumn=90
+autocmd bufnewfile,bufread nextflow.config set ft=nextflow
+autocmd bufnewfile,bufread ~/.nextflow/config set ft=nextflow
+
 " R SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType r set shiftwidth=4
@@ -385,6 +400,14 @@ autocmd FileType markdown set noautoindent
 autocmd FileType markdown set spell spelllang=en_gb
 autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+
+" SSH CONFIG FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType sshconfig set shiftwidth=2
+autocmd FileType sshconfig set textwidth=79
+autocmd FileType sshconfig set expandtab
+autocmd FileType sshconfig set colorcolumn=80
+
 
 " JSON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
