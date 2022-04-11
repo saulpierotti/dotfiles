@@ -47,6 +47,8 @@ Plug 'lervag/vimtex'
 " Syntax highlighting and linting for Snakefiles
 Plug 'snakemake/snakemake', {'rtp': 'misc/vim'}
 Plug 'snakemake/snakefmt'
+" nextflow synthax highlighting
+Plug 'Mxrcon/nextflow-vim'
 
 " this controls the linting in python and other languages
 Plug 'dense-analysis/ale' 
@@ -65,6 +67,7 @@ Plug 'josa42/coc-sh', {'do': 'yarn install --forzen-lockfile'}
 " autocompletions for json settings in coc config
 Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}
 " R lsp
+" NOTE: requires install.packages("languageserver") to be run in R
 Plug 'neoclide/coc-r-lsp', {'do': 'yarn install --forzen-lockfile'}
 
 " Debugger for python, C, and other languages
@@ -126,6 +129,10 @@ let g:ale_fixers = {
     \   ],
     \   'sh': [
     \       'shfmt',
+    \       'remove_trailing_lines',
+    \       'trim_whitespace',
+    \   ],
+    \   'nextflow': [
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
@@ -345,9 +352,18 @@ autocmd FileType snakemake set expandtab
 autocmd FileType snakemake set colorcolumn=80
 autocmd FileType snakemake autocmd BufWritePre <buffer> execute ':Snakefmt'
 
+" NEXTFLOW
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType nextflow set shiftwidth=4
+autocmd FileType nextflow set textwidth=89
+autocmd FileType nextflow set expandtab
+autocmd FileType nextflow set colorcolumn=90
+autocmd bufnewfile,bufread nextflow.config set ft=nextflow
+autocmd bufnewfile,bufread ~/.nextflow/config set ft=nextflow
+
 " R SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType r set shiftwidth=4
+autocmd FileType r set shiftwidth=2
 autocmd FileType r set textwidth=79
 autocmd FileType r set expandtab
 autocmd FileType r set colorcolumn=80
