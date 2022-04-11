@@ -1,0 +1,15 @@
+// better to set the working directory for the system, not for the workflow
+workDir = "/Users/saul/nextflow_workdir"
+
+// resume automatically
+resume = true
+
+conda {
+    // use the faster mamba solver instead of conda
+    useMamba = true
+}
+
+docker {
+    // in my local pc I use docker and not singularity
+    enabled = false
+}
