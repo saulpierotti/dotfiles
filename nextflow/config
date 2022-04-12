@@ -1,0 +1,64 @@
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Nextflow config file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Default config options for the codon cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Author: Saul Pierotti
+Mail: saul@ebi.ac.uk
+Last edited: April 12th 2022
+----------------------------------------------------------------------------------------
+*/
+
+// better to set the working directory for the system, not for the workflow
+workDir = "/hps/nobackup/birney/users/saul/nextflow"
+
+
+// resume automatically
+resume = true
+
+
+params {
+
+    // define the directory to use with publishDir
+    outdir = "/nfs/research/birney/users/saul/nextflow"
+
+}
+
+
+conda {
+    // use the faster mamba solver instead of conda
+    useMamba = true
+
+    // create environments in the software directory
+    cacheDir = "/hps/software/users/birney/saul/nextflow_software_cache/conda"
+}
+
+
+singularity {
+    enabled = true
+
+    // cache images in the software directory
+    cacheDir = "/hps/software/users/birney/saul/nextflow_software_cache/singularity"
+}
+
+
+
+// in order to use lsf use the flag -profile lsf
+profiles {
+
+    lsf {
+        executor.name = "lsf"
+        executor.queueSize = 500
+    }
+
+}
+
+process {
+    // use the short queue as default, if local executor it is just ignored
+    queue = "short"
+
+    withLabel: "long" {
+        queue = "research"
+    }
+}
