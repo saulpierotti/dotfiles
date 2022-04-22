@@ -23,6 +23,9 @@ params {
     // define the directory to use with publishDir
     outdir = "/nfs/research/birney/users/saul/nextflow"
 
+    // hostname for jupyter notebooks
+    jupyter_hostname = "hostname".execute().text.trim()
+
 }
 
 
@@ -50,6 +53,11 @@ profiles {
     lsf {
         executor.name = "lsf"
         executor.queueSize = 500
+        executor.submitRateLimit = "10/1sec"
+
+        // exit codes
+        params.memlimit_exit_code = 130
+        params.runlimit_exit_code = 130
     }
 
 }
