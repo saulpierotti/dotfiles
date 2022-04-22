@@ -57,7 +57,7 @@ profiles {
 
         // exit codes
         params.memlimit_exit_code = 130
-        params.runlimit_exit_code = 130
+        params.runlimit_exit_code = 140
     }
 
 }
