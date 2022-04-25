@@ -54,6 +54,7 @@ profiles {
         executor.name = "lsf"
         executor.queueSize = 500
         executor.submitRateLimit = "10/1sec"
+        executor.exitReadTimeout = "15 min"
 
         // exit codes
         params.memlimit_exit_code = 130
@@ -68,5 +69,10 @@ process {
 
     withLabel: "long" {
         queue = "research"
+    }
+
+    withLabel: "filesystem_latency_susceptible" {
+        errorStrategy = { ( task.exitStatus == 0 ) ? "retry" : "terminate" }
+        maxRetries = 3
     }
 }
