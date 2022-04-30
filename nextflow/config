@@ -93,3 +93,8 @@ timeline {
     enabled = true
     file = "/hps/nobackup/birney/users/saul/nextflow_logs/timeline/${runName}.html"
 }
+
+notification {
+    enabled = true
+    to = saul@ebi.ac.uk, saulpierotti@gmail.com
+}
