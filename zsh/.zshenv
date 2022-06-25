@@ -28,6 +28,10 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 # codon cluster specific
 export N_PREFIX="/hps/software/users/birney/saul"
 
+# nextflow tower token
+export TOWER_ACCESS_TOKEN=$(cat ~/.nextflow/nextflow_tower_token)
+export NXF_VER=20.10.0
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 

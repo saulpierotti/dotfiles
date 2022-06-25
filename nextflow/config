@@ -43,6 +43,9 @@ singularity {
 
     // cache images in the software directory
     cacheDir = "/hps/software/users/birney/saul/nextflow_software_cache/singularity"
+
+    // the default is 20 minutes and fails with large images
+    pullTimeout = "3 hours"
 }
 
 
@@ -59,6 +62,8 @@ profiles {
         // exit codes
         params.memlimit_exit_code = 130
         params.runlimit_exit_code = 140
+        params.filesystem_latency_error = 255
+        params.none_has_no_shape_error = 134
     }
 
 }
@@ -69,6 +74,8 @@ process {
     // this is to avoid errors for missing files due to shared filesystem latency
     maxRetries = 3
     errorStrategy = { ( task.exitStatus == 0 ) ? "retry" : "terminate" }
+    // avoid cahce invalidation due to lsf timestamps
+    cache = "lenient"
 
     withLabel: "long" {
         queue = "research"
@@ -81,20 +88,24 @@ process {
 
 report {
     enabled = true
-    file = "/hps/nobackup/birney/users/saul/nextflow_logs/report/${runName}.html"
+    file = "/hps/nobackup/birney/users/saul/nextflow_logs/report.html"
 }
 
 trace {
     enabled = true
-    file = "/hps/nobackup/birney/users/saul/nextflow_logs/trace/${runName}.txt"
+    file = "/hps/nobackup/birney/users/saul/nextflow_logs/trace.txt"
 }
 
 timeline {
     enabled = true
-    file = "/hps/nobackup/birney/users/saul/nextflow_logs/timeline/${runName}.html"
+    file = "/hps/nobackup/birney/users/saul/nextflow_logs/timeline.html"
 }
 
 notification {
     enabled = true
-    to = saul@ebi.ac.uk, saulpierotti@gmail.com
+    to = "saul@ebi.ac.uk, saulpierotti@gmail.com"
+}
+
+tower {
+  enabled = true
 }
