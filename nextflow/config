@@ -64,6 +64,10 @@ profiles {
         params.runlimit_exit_code = 140
         params.filesystem_latency_error = 255
         params.none_has_no_shape_error = 134
+
+        // number of cpus in standard nodes
+        params.max_cpus = 95
+        params.max_cpus_bigmem = 47
     }
 
 }
@@ -86,25 +90,25 @@ process {
     }
 }
 
-report {
-    enabled = true
-    file = "/hps/nobackup/birney/users/saul/nextflow_logs/report.html"
-}
-
-trace {
-    enabled = true
-    file = "/hps/nobackup/birney/users/saul/nextflow_logs/trace.txt"
-}
-
-timeline {
-    enabled = true
-    file = "/hps/nobackup/birney/users/saul/nextflow_logs/timeline.html"
-}
-
-notification {
-    enabled = true
-    to = "saul@ebi.ac.uk, saulpierotti@gmail.com"
-}
+// report {
+//     enabled = true
+//     file = "/hps/nobackup/birney/users/saul/nextflow_logs/report.html"
+// }
+//
+// trace {
+//     enabled = true
+//     file = "/hps/nobackup/birney/users/saul/nextflow_logs/trace.txt"
+// }
+//
+// timeline {
+//     enabled = true
+//     file = "/hps/nobackup/birney/users/saul/nextflow_logs/timeline.html"
+// }
+//
+// notification {
+//     enabled = true
+//     to = "saul@ebi.ac.uk, saulpierotti@gmail.com"
+// }
 
 tower {
   enabled = true

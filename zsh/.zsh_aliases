@@ -14,5 +14,4 @@ alias gitup="git_update.sh"
 alias rstudio-singularity="echo -e '\e]8;;http://$(hostname):8787\aAccess Rstudio server from: http://$(hostname):8787\e]8;;\a'; singularity run --bind /hps/software/users/birney/saul/rstudio_singularity_required/run:/run,/hps/software/users/birney/saul/rstudio_singularity_required/var-lib-rstudio-server:/var/lib/rstudio-server,/hps/software/users/birney/saul/rstudio_singularity_required/database.conf /hps/software/users/birney/saul/singularity_imgs/rstudio_latest.sif"
 alias jlab-singularity="singularity exec software/singularity_imgs/base-notebook_latest.sif jupyter-lab"
 alias jlab-mamba="mamba activate;jupyter-lab --ip='*';mamba deactivate"
-# list running jupyter servers with hostname instead of localhost
-alias jlist=
+alias bam-readcount="singularity run /homes/saul/software/singularity_imgs/bam-readcount_latest.sif"
