@@ -11,5 +11,9 @@ conda {
 
 docker {
     // in my local pc I use docker and not singularity
-    enabled = false
+    enabled = true
+}
+
+params {
+    outdir = "/Users/saul/nextflow_pubdir"
 }

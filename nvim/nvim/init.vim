@@ -362,7 +362,7 @@ autocmd bufnewfile,bufread ~/.nextflow/config set ft=nextflow
 
 " R SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType r set shiftwidth=4
+autocmd FileType r set shiftwidth=2
 autocmd FileType r set textwidth=79
 autocmd FileType r set expandtab
 autocmd FileType r set colorcolumn=80
