@@ -10,24 +10,8 @@ Last edited: April 12th 2022
 ----------------------------------------------------------------------------------------
 */
 
-// better to set the working directory for the system, not for the workflow
-workDir = "/hps/nobackup/birney/users/saul/nextflow"
-
-
 // resume automatically
 resume = true
-
-
-params {
-
-    // define the directory to use with publishDir
-    outdir = "/nfs/research/birney/users/saul/nextflow"
-
-    // hostname for jupyter notebooks
-    jupyter_hostname = "hostname".execute().text.trim()
-
-}
-
 
 conda {
     // use the faster mamba solver instead of conda
@@ -36,7 +20,6 @@ conda {
     // create environments in the software directory
     cacheDir = "/hps/software/users/birney/saul/nextflow_software_cache/conda"
 }
-
 
 singularity {
     enabled = true
@@ -74,41 +57,21 @@ profiles {
 
 process {
     // use the short queue as default, if local executor it is just ignored
-    queue = "short"
+    queue = {
+        if (task.time > 1.day ) {
+            'long'
+        } else if (task.time > 24.h) {
+            'research'
+        } else {
+            'short'
+        }
+    }
     // this is to avoid errors for missing files due to shared filesystem latency
     maxRetries = 3
     errorStrategy = { ( task.exitStatus == 0 ) ? "retry" : "terminate" }
-    // avoid cahce invalidation due to lsf timestamps
+    // avoid cache invalidation due to lsf timestamps
     cache = "lenient"
-
-    withLabel: "long" {
-        queue = "research"
-    }
-
-    withLabel: "better_local" {
-        executor = "local"
-    }
 }
-
-// report {
-//     enabled = true
-//     file = "/hps/nobackup/birney/users/saul/nextflow_logs/report.html"
-// }
-//
-// trace {
-//     enabled = true
-//     file = "/hps/nobackup/birney/users/saul/nextflow_logs/trace.txt"
-// }
-//
-// timeline {
-//     enabled = true
-//     file = "/hps/nobackup/birney/users/saul/nextflow_logs/timeline.html"
-// }
-//
-// notification {
-//     enabled = true
-//     to = "saul@ebi.ac.uk, saulpierotti@gmail.com"
-// }
 
 tower {
   enabled = true
