@@ -58,11 +58,11 @@ profiles {
 process {
     // use the short queue as default, if local executor it is just ignored
     queue = {
-        if ( task.time > 1.week && task.memory > 300.GB ) {
+        if ( task.time > 7.day && task.memory > 300.GB ) {
             "long_bigmem"
         } else if ( task.time > 1.day && task.memory > 300.GB ) {
             "bigmem"
-        } else if ( task.time > 1.week ) {
+        } else if ( task.time > 7.day ) {
             "long"
         } else if ( task.time > 1.day ) {
             "research"
