@@ -40,17 +40,7 @@ profiles {
         executor.name = "lsf"
         executor.queueSize = 500
         executor.submitRateLimit = "10/1sec"
-        executor.exitReadTimeout = "15 min"
-
-        // exit codes
-        params.memlimit_exit_code = 130
-        params.runlimit_exit_code = 140
-        params.filesystem_latency_error = 255
-        params.none_has_no_shape_error = 134
-
-        // number of cpus in standard nodes
-        params.max_cpus = 95
-        params.max_cpus_bigmem = 47
+        executor.exitReadTimeout = "30 min"
     }
 
 }
@@ -60,7 +50,7 @@ process {
     queue = {
         if ( task.time > 7.day && task.memory > 300.GB ) {
             "long_bigmem"
-        } else if ( task.time > 1.day && task.memory > 300.GB ) {
+        } else if ( task.memory > 300.GB ) {
             "bigmem"
         } else if ( task.time > 7.day ) {
             "long"

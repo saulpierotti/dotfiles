@@ -32,6 +32,21 @@ export N_PREFIX="/hps/software/users/birney/saul"
 # nextflow tower token
 export TOWER_ACCESS_TOKEN=$(cat ~/.nextflow/nextflow_tower_token)
 
+if [[ `uname` == Darwin ]]; then
+    MAX_MEMORY_UNITS=KB
+else
+    MAX_MEMORY_UNITS=MB
+fi
+
+# fancy time command
+export TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
+'avg shared (code):         %X KB'$'\n'\
+'avg unshared (data/stack): %D KB'$'\n'\
+'total (sum):               %K KB'$'\n'\
+'max memory:                %M '$MAX_MEMORY_UNITS''$'\n'\
+'page faults from disk:     %F'$'\n'\
+'other page faults:         %R'
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
