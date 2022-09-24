@@ -41,6 +41,12 @@ profiles {
         executor.queueSize = 500
         executor.submitRateLimit = "10/1sec"
         executor.exitReadTimeout = "30 min"
+        executor.jobName = {
+            task.name
+                // [] not allowed in lsf job names
+                .replace("[", "(")
+                .replace("]", ")")
+        }
     }
 
 }
@@ -61,8 +67,13 @@ process {
         }
     }
 
-    withLabel: "gpu" {
-        queue = "gpu"
+    withLabel:process_gpu {
+        queue = "gpu-a100"
+        containerOptions = {
+            workflow.containerEngine == "singularity" ? '--nv': (
+                workflow.containerEngine == "docker" ? '--gpus all': null
+            )
+        }
     }
 
     // this is to avoid errors for missing files due to shared filesystem latency
