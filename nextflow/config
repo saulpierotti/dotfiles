@@ -69,11 +69,7 @@ process {
 
     withLabel:process_gpu {
         queue = "gpu-a100"
-        containerOptions = {
-            workflow.containerEngine == "singularity" ? '--nv': (
-                workflow.containerEngine == "docker" ? '--gpus all': null
-            )
-        }
+        clusterOptions = { "-gpu \"num=1:gmem=${task.ext.gmem}\"" }
     }
 
     // this is to avoid errors for missing files due to shared filesystem latency
