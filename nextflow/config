@@ -38,8 +38,8 @@ profiles {
 
     lsf {
         executor.name = "lsf"
-        executor.queueSize = 500
-        executor.submitRateLimit = "10/1sec"
+        executor.queueSize = 2000
+        executor.submitRateLimit = "5/1sec"
         executor.exitReadTimeout = "30 min"
         executor.jobName = {
             task.name
