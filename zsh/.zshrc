@@ -1,6 +1,8 @@
 # codon cluster specific
 fpath+=$HOME/.zsh/pure
-module load singularity-3.7.0-gcc-9.3.0-dp5ffrp
+
+# Load modules
+source ~/.module_load
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -34,11 +36,9 @@ bindkey '^e' edit-command-line
 # reverse search
 bindkey '^R' history-incremental-search-backward
 
-# Use ranger to switch directories and bind it to ctrl-o
-bindkey -s '^o' 'source ranger_launcher.sh\n'
-
 # pure theme
-autoload -U promptinit compinit bashcompinit && promptinit && compinit && bashcompinit
+autoload -Uz promptinit
+promptinit
 prompt pure
 
 # add snakemake completion

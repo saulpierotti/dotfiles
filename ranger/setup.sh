@@ -1,4 +1,3 @@
 #!/bin/bash
-
-brew install ranger
+pip3 install --user ranger-fm
 ln -s $(pwd)/ranger ~/.config

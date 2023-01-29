@@ -82,10 +82,7 @@ call plug#end()
 
 " read .zshrc and aliases
 set shell=zsh
-" use the system clipboard
-set clipboard=unnamedplus
-" activate mouse
-set mouse=a
+set number
 " hide the --INSERT-- and other status (since it is shown by airline)
 set noshowmode
 " Show special characters
@@ -358,7 +355,7 @@ autocmd FileType nextflow set shiftwidth=4
 autocmd FileType nextflow set textwidth=89
 autocmd FileType nextflow set expandtab
 autocmd FileType nextflow set colorcolumn=90
-autocmd bufnewfile,bufread nextflow.config set ft=nextflow
+autocmd bufnewfile,bufread *nextflow.config set ft=nextflow
 autocmd bufnewfile,bufread ~/.nextflow/config set ft=nextflow
 
 " R SCRIPTS
