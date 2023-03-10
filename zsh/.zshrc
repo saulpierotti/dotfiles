@@ -1,7 +1,6 @@
-# Load antigen (Ubuntu installation)
-source /usr/share/zsh-antigen/antigen.zsh
-
 # Load the oh-my-zsh's library.
+
+source "$HOME/.zsh/antigen.zsh"
 antigen use oh-my-zsh
 
 # plugins
@@ -44,5 +43,6 @@ bindkey -s '^f' 'nautilus .&; disown\n'
 zstyle ':vcs_info:*' disable-patterns "$HOME/sshfs_mountpoint(|/*)"
 
 # pure theme
+fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure

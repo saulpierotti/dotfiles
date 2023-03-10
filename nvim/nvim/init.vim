@@ -4,6 +4,7 @@
 " must be before plugins are loaded
 " I use Coc for LSP
 let g:ale_disable_lsp = 1
+let g:coc_disable_startup_warning = 1
 
 " PLUGINS (vim plugged)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -50,18 +51,6 @@ Plug 'dense-analysis/ale'
 " general code completer for many languages with intellisense (with extensions)
 " plugin installation requires yarn
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Microsoft LSP for python
-Plug 'fannheyward/coc-pyright', {'do': 'yarn install --forzen-lockfile'}
-" Microsoft LSP for tex
-Plug 'fannheyward/coc-texlab', {'do': 'yarn install --forzen-lockfile'}
-" Integration for vimtex autocompletion
-Plug 'neoclide/coc-vimtex', {'do': 'yarn install --forzen-lockfile'}
-" provides bash-language-server
-Plug 'josa42/coc-sh', {'do': 'yarn install --forzen-lockfile'}
-" autocompletions for json settings in coc config
-Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}
-" R lsp
-Plug 'neoclide/coc-r-lsp', {'do': 'yarn install --forzen-lockfile'}
 
 " Debugger for python, C, and other languages
 Plug 'puremourning/vimspector'
