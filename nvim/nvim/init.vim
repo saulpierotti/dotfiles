@@ -83,6 +83,7 @@ call plug#end()
 " read .zshrc and aliases
 set shell=zsh
 set number
+set mouse=a
 " hide the --INSERT-- and other status (since it is shown by airline)
 set noshowmode
 " Show special characters
