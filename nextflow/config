@@ -53,7 +53,7 @@ profiles {
                 } else if ( task.time > 1.day ) {
                     "research"
                 } else {
-                    "short"
+                    "research"
                 }
             }
         }
@@ -62,21 +62,6 @@ profiles {
 
     slurm {
         executor.name = "slurm"
-
-        process {
-            // use the short queue as default, if local executor it is just ignored
-            queue = {
-                if ( task.time > 7.day && task.memory > 300.GB ) {
-                    "long_bigmem"
-                } else if ( task.time > 7.day ) {
-                    "long"
-                } else if ( task.time > 1.day ) {
-                    "research"
-                } else {
-                    "short"
-                }
-            }
-        }
     }
 
 }

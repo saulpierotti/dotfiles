@@ -350,10 +350,17 @@ autocmd FileType snakemake set expandtab
 autocmd FileType snakemake set colorcolumn=80
 autocmd FileType snakemake autocmd BufWritePre <buffer> execute ':Snakefmt'
 
+" GROOVY
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType groovy set shiftwidth=4
+autocmd FileType groovy set textwidth=79
+autocmd FileType groovy set expandtab
+autocmd FileType groovy set colorcolumn=90
+
 " NEXTFLOW
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType nextflow set shiftwidth=4
-autocmd FileType nextflow set textwidth=89
+autocmd FileType nextflow set textwidth=79
 autocmd FileType nextflow set expandtab
 autocmd FileType nextflow set colorcolumn=90
 autocmd bufnewfile,bufread *nextflow.config set ft=nextflow
@@ -361,7 +368,7 @@ autocmd bufnewfile,bufread ~/.nextflow/config set ft=nextflow
 
 " R SCRIPTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType r set shiftwidth=2
+autocmd FileType r set shiftwidth=4
 autocmd FileType r set textwidth=79
 autocmd FileType r set expandtab
 autocmd FileType r set colorcolumn=80
