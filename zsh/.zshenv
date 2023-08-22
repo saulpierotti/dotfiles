@@ -18,7 +18,9 @@ source /hps/software/users/birney/saul/bin/antigen.zsh
 # needs to be done here otherwise spack completion is not defined at login
 # and an error is raised
 autoload -U bashcompinit
+autoload -Uz compinit
 bashcompinit
+compinit
 
 # codon cluster specific
 export N_PREFIX="/hps/software/users/birney/saul"

@@ -20,9 +20,6 @@ antigen apply
 # Load my aliases
 source ~/.zsh_aliases
 
-autoload -Uz compinit
-compinit
-
 # history (copied from autoconfig)
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -46,6 +43,9 @@ prompt pure
 
 # add snakemake completion
 compdef _gnu_generic snakemake
+
+# needed here for micromamba completion
+compinit
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
