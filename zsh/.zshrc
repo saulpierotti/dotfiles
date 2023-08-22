@@ -20,6 +20,9 @@ antigen apply
 # Load my aliases
 source ~/.zsh_aliases
 
+autoload -Uz compinit
+compinit
+
 # history (copied from autoconfig)
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -35,9 +38,6 @@ bindkey '^e' edit-command-line
 
 # reverse search
 bindkey '^R' history-incremental-search-backward
-
-autoload -Uz compinit
-compinit
 
 # pure theme
 autoload -Uz promptinit
