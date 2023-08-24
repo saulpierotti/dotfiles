@@ -1,11 +1,8 @@
-# Default options
 alias grep="grep --color=auto"
 alias pwd="pwd -P"
-
-# built-in commands aliases
 alias q="exit"
 alias v="nvim"
 alias c="clear"
 alias r="reset"
-alias py="python3"
 alias gitup="git_update.sh"
+alias jlab="micromamba activate jupyterlab && jupyter lab --ip \$(hostname) --ContentsManager.allow_hidden=True || micromamba deactivate"

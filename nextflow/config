@@ -16,8 +16,8 @@ resume = true
 conda {
     enabled = true
 
-    // use the faster mamba solver instead of conda
-    useMamba = true
+    // use the faster micromamba solver instead of conda
+    useMicromamba = true
 
     // create environments in the software directory
     cacheDir = "/hps/software/users/birney/saul/nextflow_software_cache/conda"
