@@ -5,6 +5,9 @@
 " I use Coc for LSP
 let g:ale_disable_lsp = 1
 
+" python support needed for some plugins
+let g:python3_host_prog = '/usr/bin/python3'
+
 " PLUGINS (vim plugged)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')

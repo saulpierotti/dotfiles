@@ -2,7 +2,7 @@ export SHELL="/bin/zsh"
 
 export PATH=$PATH:"/hps/software/users/birney/saul/n/versions/node/17.3.0/bin"
 export PATH=$PATH:"/hps/software/users/birney/saul/scripts"
-export PATH=$PATH:"/hps/software/users/birney/saul/.local/bin"
+export PATH=$PATH:"/hps/software/users/birney/saul/bin"
 
 # text editor
 export EDITOR="nvim"
