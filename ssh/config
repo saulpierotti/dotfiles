@@ -1,0 +1,11 @@
+Host ebi-gate
+	HostName ligate.ebi.ac.uk
+	HostName mitigate.ebi.ac.uk
+	User saul
+	IdentityFile ~/.ssh/id_rsa
+	Port 2244
+
+Host codon*
+	HostName %h.ebi.ac.uk
+	User saul
+	IdentityFile ~/.ssh/id_ed25519

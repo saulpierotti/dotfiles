@@ -72,8 +72,6 @@ call plug#end()
 
 " GENERAL SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" read .zshrc and aliases
-set shell=zsh\ -i
 " use the system clipboard
 set clipboard=unnamedplus
 " use my custom spellfile
