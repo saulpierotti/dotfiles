@@ -1,2 +1,2 @@
 # workaround since I cannot set the shell with chsh
-exec /bin/zsh -l
+shopt -q login_shell && [[ $- == *i* ]] && exec /bin/zsh -l
