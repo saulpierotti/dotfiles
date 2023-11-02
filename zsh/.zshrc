@@ -36,6 +36,9 @@ bindkey '^e' edit-command-line
 # reverse search
 bindkey '^R' history-incremental-search-backward
 
+# needed for incremental search
+autoload -Uz compinit
+
 # pure theme
 autoload -Uz promptinit
 promptinit
