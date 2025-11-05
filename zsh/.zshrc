@@ -1,5 +1,5 @@
 # Load antigen (Ubuntu installation)
-source /usr/local/share/antigen/antigen.zsh
+source /usr/share/zsh-antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -7,7 +7,6 @@ antigen use oh-my-zsh
 # plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
-antigen bundle esc/conda-zsh-completion 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle command-not-found
 
@@ -37,29 +36,31 @@ bindkey '^R' history-incremental-search-backward
 bindkey -s '^o' 'source ranger_launcher.sh\n'
 bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
 
+# open nautilus in working dir
+bindkey -s '^f' 'nautilus .&; disown\n'
+
+# disable git plugins in the sshfs mount folder for performance reasons
+zstyle ':vcs_info:*' disable-patterns "$HOME/sshfs_mountpoint(|/*)"
+
 # pure theme
-autoload -U promptinit compinit bashcompinit && promptinit && compinit && bashcompinit
+autoload -U promptinit; promptinit
 prompt pure
 
-# add snakemake completion
-compdef _gnu_generic snakemake
+PATH="/home/spierotti/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/spierotti/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/spierotti/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/spierotti/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/spierotti/perl5"; export PERL_MM_OPT;
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/saul/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/home/spierotti/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/spierotti/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    eval "$__mamba_setup"
 else
-    if [ -f "/Users/saul/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/saul/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/saul/mambaforge/bin:$PATH"
-    fi
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
 fi
-unset __conda_setup
-
-if [ -f "/Users/saul/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/Users/saul/mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
+unset __mamba_setup
+# <<< mamba initialize <<<

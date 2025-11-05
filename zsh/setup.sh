@@ -1,10 +1,10 @@
 #!/bin/bash
 
-xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Brew install antigen
-brew install zsh-async
-brew install pure
-ln -s $(pwd -P)/.zshrc ~
-ln -s $(pwd -P)/.zshenv ~
-ln -s $(pwd -P)/.zsh_aliases ~
+sudo apt install zsh
+chsh -s /usr/bin/zsh 
+sudo apt install zsh-antigen
+sudo apt install npm
+sudo npm install --global pure-prompt
+ln -s $(pwd)/.zshrc ~
+ln -s $(pwd)/.zshenv ~
+ln -s $(pwd)/.zsh_aliases ~
