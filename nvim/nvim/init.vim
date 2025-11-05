@@ -7,6 +7,7 @@ let g:ale_disable_lsp = 1
 
 " python support needed for some plugins
 let g:python3_host_prog = '/usr/bin/python3'
+let g:clipboard = 'tmux'
 
 " PLUGINS (vim plugged)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

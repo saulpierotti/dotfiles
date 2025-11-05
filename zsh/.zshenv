@@ -2,6 +2,7 @@ export SHELL="/bin/zsh"
 
 export PATH=$PATH:"/home/spierotti/.scripts"
 export PATH=$PATH:"/home/spierotti/.local/bin"
+export PATH=$PATH:"/home/.local/"
 
 # text editor
 export EDITOR="nvim"
