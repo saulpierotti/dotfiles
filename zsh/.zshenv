@@ -3,6 +3,7 @@ export SHELL="/bin/zsh"
 export PATH=$PATH:"/hps/software/users/birney/saul/n/versions/node/17.3.0/bin"
 export PATH=$PATH:"/hps/software/users/birney/saul/scripts"
 export PATH=$PATH:"/hps/software/users/birney/saul/bin"
+export PATH=$PATH:"/homes/saul/.local/bin"
 
 # text editor
 export EDITOR="nvim"
@@ -28,6 +29,9 @@ export N_PREFIX="/hps/software/users/birney/saul"
 # nextflow tower token
 export TOWER_ACCESS_TOKEN=$(cat ~/.nextflow/nextflow_tower_token)
 
+# R
+export R_LIBS_USER="/hps/software/users/birney/saul/r4.4"
+
 if [[ `uname` == Darwin ]]; then
     MAX_MEMORY_UNITS=KB
 else
@@ -42,3 +46,9 @@ export TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'max memory:                %M '$MAX_MEMORY_UNITS''$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
+
+
+#######################################
+## Added by `nf-core pipelines download` v3.3.2 ##
+export NXF_SINGULARITY_CACHEDIR="/hps/software/users/birney/saul/nextflow_software_cache/singularity"
+#######################################

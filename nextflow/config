@@ -14,11 +14,15 @@ Last edited: April 12th 2022
 resume = true
 
 conda {
+    enabled = true
     // use the faster micromamba solver instead of conda
     useMicromamba = true
 
     // create environments in the software directory
     cacheDir = "/hps/software/users/birney/saul/nextflow_software_cache/conda"
+
+    createTimeout = "3 hours"
+
 }
 
 singularity {

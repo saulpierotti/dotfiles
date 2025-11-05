@@ -62,3 +62,9 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+PATH="/homes/saul/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/homes/saul/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/homes/saul/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/homes/saul/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/homes/saul/perl5"; export PERL_MM_OPT;
