@@ -1,8 +1,8 @@
-export SHELL="/bin/zsh"
+export SHELL="${HOME}/.local/bin/zsh"
+export PATH=$PATH:"${HOME}/.scripts"
+export PATH=$PATH:"${HOME}/.local/bin"
 
-export PATH=$PATH:"/home/spierotti/.scripts"
-export PATH=$PATH:"/home/spierotti/.local/bin"
-export PATH=$PATH:"/home/.local/"
+export LD_LIBRARY_PATH="${HOME}/local/lib"
 
 # text editor
 export EDITOR="nvim"
@@ -17,3 +17,5 @@ export TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'max memory:                %M '$MAX_MEMORY_UNITS''$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
+
+source ${HOME}/.module_load
