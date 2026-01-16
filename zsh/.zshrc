@@ -1,5 +1,7 @@
 # Load antigen
 source /opt/homebrew/share/antigen/antigen.zsh
+export ANTIGEN_LOG=/tmp/antigen.log
+export ANTIGEN_DEBUG=1
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -7,8 +9,8 @@ antigen use oh-my-zsh
 # plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
-antigen bundle esc/conda-zsh-completion 
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle esc/conda-zsh-completion@main
 antigen bundle command-not-found
 
 # Tell Antigen that you're done.
@@ -40,9 +42,6 @@ bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
 # pure theme
 autoload -U promptinit compinit bashcompinit && promptinit && compinit && bashcompinit
 prompt pure
-
-# add snakemake completion
-compdef _gnu_generic snakemake
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

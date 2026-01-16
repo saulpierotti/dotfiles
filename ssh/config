@@ -18,3 +18,15 @@ Host alice
 Host alice-proxy-server
   Hostname ssh-gw.alice.universiteitleiden.nl
   User spierotti
+
+Host codon
+  User saul
+  Hostname codon-slurm-login-04.ebi.ac.uk
+  Hostname codon-slurm-login.ebi.ac.uk
+  Proxyjump codon-proxy-server
+
+Host codon-proxy-server
+  User saul
+  Hostname mitigate.ebi.ac.uk
+  Hostname ligate.ebi.ac.uk
+  Port 2244
