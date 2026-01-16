@@ -1,5 +1,5 @@
-# Load antigen (Ubuntu installation)
-source /usr/local/share/antigen/antigen.zsh
+# Load antigen
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
