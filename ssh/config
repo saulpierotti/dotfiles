@@ -1,0 +1,21 @@
+Host shark
+  Hostname res-hpc-lo02.researchlumc.nl
+  Hostname res-hpc-lo04.researchlumc.nl
+  User spierotti
+  Identityfile /home/spierotti/.ssh/id_ed25519
+
+Host shark-proxy-server
+  Hostname res-ssh-alg01.researchlumc.nl
+  User spierotti
+
+Host alice
+  Hostname login.alice.universiteitleiden.nl
+  Hostname login3.alice.universiteitleiden.nl
+  Hostname login4.alice.universiteitleiden.nl
+  User spierotti
+  Proxyjump alice-proxy-server
+
+Host alice-proxy-server
+  Hostname ssh-gw.alice.universiteitleiden.nl
+  Hostname 132.229.92.133
+  User spierotti

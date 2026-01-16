@@ -7,6 +7,7 @@ antigen use oh-my-zsh
 # plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
+antigen bundle esc/conda-zsh-completion
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle command-not-found
 
@@ -32,19 +33,17 @@ bindkey '^e' edit-command-line
 # reverse search
 bindkey '^R' history-incremental-search-backward
 
-# Use ranger to switch directories and bind it to ctrl-o
-bindkey -s '^o' 'source ranger_launcher.sh\n'
-bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
-
-# open nautilus in working dir
-bindkey -s '^f' 'nautilus .&; disown\n'
-
-# disable git plugins in the sshfs mount folder for performance reasons
-zstyle ':vcs_info:*' disable-patterns "$HOME/sshfs_mountpoint(|/*)"
+# needed for incremental search
+autoload -U bashcompinit
+autoload -Uz compinit
 
 # pure theme
-autoload -U promptinit; promptinit
+autoload -Uz promptinit
+promptinit
 prompt pure
+
+# needed here for micromamba completion
+compinit
 
 PATH="/home/spierotti/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/spierotti/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
