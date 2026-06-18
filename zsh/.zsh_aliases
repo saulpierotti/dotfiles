@@ -1,5 +1,4 @@
 alias grep="grep --color=auto"
-alias pwd="pwd -P"
 alias q="exit"
 alias v="nvim"
 alias c="clear"
